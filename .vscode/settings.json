@@ -1,0 +1,10 @@
+{
+    "yaml.customTags": [
+      "!DOCKER_USERNAME",
+      "!DOCKER_PASSWORD",
+      "!DOCKER_REGISTRY",
+      "!VERSION",
+      "!BRANCH_NAME"
+    ]
+  }
+  
