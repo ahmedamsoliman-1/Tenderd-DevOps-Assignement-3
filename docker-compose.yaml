@@ -1,0 +1,22 @@
+# version: '3.8'
+services:
+  user-svc:
+    build: ./user-svc
+    ports:
+      - "5000:5000"
+  
+  order-svc:
+    build: ./order-svc
+    ports:
+      - "5001:5001"
+
+  frontend-svc:
+    build: ./frontend-svc
+    ports:
+      - "8080:8080"
+    environment:
+      - USER_SERVICE_URL=http://user-svc:5000/users
+      - ORDER_SERVICE_URL=http://order-svc:5001/orders
+    depends_on:
+      - user-svc
+      - order-svc
