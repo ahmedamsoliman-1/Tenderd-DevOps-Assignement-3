@@ -1,5 +1,5 @@
 
-#  - Tenderd 
+#  DevOps Assignment - Tenderd 
 
 This documentation and configuration to help set up, build, and run microservices using Docker Compose, providing clear instructions for each service.
 
