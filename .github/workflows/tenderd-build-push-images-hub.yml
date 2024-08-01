@@ -70,6 +70,6 @@ jobs:
       - name: Build and push Docker images
         if: success()
         run: |
-          docker buildx build --platform linux/amd64,linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/tenderd-devops-frontend-svc:v3 --push ./frontend-svc
-          docker buildx build --platform linux/amd64,linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/tenderd-devops-order-svc:v3 --push ./order-svc
-          docker buildx build --platform linux/amd64,linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/tenderd-devops-user-svc:v3 --push ./user-svc
+          docker buildx build --platform linux/amd64,linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/tenderd-devops-frontend-svc:latest --push ./frontend-svc
+          docker buildx build --platform linux/amd64,linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/tenderd-devops-order-svc:latest --push ./order-svc
+          docker buildx build --platform linux/amd64,linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/tenderd-devops-user-svc:latest --push ./user-svc
